@@ -27,6 +27,8 @@ mesh: .generateCylinder(height: 1, radius: 0.1),
 mesh: .generatePlane(width: 4, depth: 0.1),
 ```
 
+![image](https://github.com/jtmuller5/VisionOS-Tips-and-Tricks/assets/47997351/f513af88-df6a-46ac-b559-effd16d542f5)
+
 You can also choose from several material types to change how the 3D shape is displayed:
 - [SimpleMaterial](https://developer.apple.com/documentation/realitykit/simplematerial)
 - [UnlitMaterial](https://developer.apple.com/documentation/realitykit/unlitmaterial)
