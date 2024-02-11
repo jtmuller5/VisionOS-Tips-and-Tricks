@@ -9,20 +9,19 @@ import SwiftUI
 import RealityKit
 import RealityKitContent
 
+
 struct ContentView: View {
-    
-       private let url = URL(string: "https://developer.apple.com/augmented-reality/quick-look/models/teapot/teapot.usdz")!
-    
-       
+
        var body: some View {
            VStack {
-               RealityView { content in
-                          let model = ModelEntity(
-                            // mesh: .generateBox(size: Float(2), cornerRadius: 0),
-                            mesh: .generateSphere(radius: 0.1),
-                            materials: [SimpleMaterial(color: .purple, isMetallic: true)])
-                          content.add(model)
-                      }
+               Model3D(named: "Globe") { model in
+                  model
+                      .resizable()
+                      .aspectRatio(contentMode: .fit)
+                      .frame(width: 200, height: 200)
+                      } placeholder: {
+                  ProgressView()
+               }
            }
            .padding()
        }

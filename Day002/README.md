@@ -35,8 +35,9 @@ You can also choose from several material types to change how the 3D shape is di
 
 You can read the official documentation on [Adding 3D content to your app](https://developer.apple.com/documentation/visionos/adding-3d-content-to-your-app/) for more information.
 
-## Model3D
+## [Model3D](https://developer.apple.com/documentation/realitykit/model3d/)
 
+You can display a 3D model from a URL or from your app's assets. To display one from a URL, link directly to the `.usdz` file:
 ```swift
 
 private let url = URL(string: "https://developer.apple.com/augmented-reality/quick-look/models/teapot/teapot.usdz")!
@@ -48,5 +49,16 @@ Model3D(url: url) { model in
        .frame(width: 200, height: 200)
        } placeholder: {
    ProgressView()
+}
+```
+To display on object from your app's assets,first add the file to your app by selecting File > Add Files To... and then selecting your models. You can add these models to a nested `Assets` folder to stay organized. In your app you can reference the models by name:
+```swift
+Model3D(named: "Globe") { model in
+  model
+      .resizable()
+      .aspectRatio(contentMode: .fit)
+      .frame(width: 200, height: 200)
+      } placeholder: {
+  ProgressView()
 }
 ```

@@ -12,6 +12,8 @@
 		2DF3C56F2B797B7C00526A26 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF3C56E2B797B7C00526A26 /* ContentView.swift */; };
 		2DF3C5712B797B7D00526A26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DF3C5702B797B7D00526A26 /* Assets.xcassets */; };
 		2DF3C5742B797B7D00526A26 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DF3C5732B797B7D00526A26 /* Preview Assets.xcassets */; };
+		2DF3C57E2B79902C00526A26 /* Globe.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 2DF3C57D2B79902C00526A26 /* Globe.usdz */; };
+		2DF3C5802B79911200526A26 /* Teapot.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 2DF3C57F2B79911100526A26 /* Teapot.usdz */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,10 @@
 		2DF3C5732B797B7D00526A26 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2DF3C5752B797B7D00526A26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2DF3C57B2B797B9600526A26 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		2DF3C57D2B79902C00526A26 /* Globe.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; name = Globe.usdz; path = "../../../../../Downloads/Hello World/Packages/WorldAssets/Sources/WorldAssets/WorldAssets.rkassets/Globe.usdz"; sourceTree = "<group>"; };
+		2DF3C57F2B79911100526A26 /* Teapot.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; name = Teapot.usdz; path = ../../../../../Downloads/Teapot.usdz; sourceTree = "<group>"; };
+		2DF3C5822B7991D300526A26 /* Teapot.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Teapot.usdz; sourceTree = "<group>"; };
+		2DF3C5832B7991D600526A26 /* Globe.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Globe.usdz; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,9 +64,12 @@
 		2DF3C5672B797B7C00526A26 /* Day002 */ = {
 			isa = PBXGroup;
 			children = (
+				2DF3C5812B7991C700526A26 /* Assets */,
 				2DF3C56C2B797B7C00526A26 /* Day002App.swift */,
 				2DF3C56E2B797B7C00526A26 /* ContentView.swift */,
+				2DF3C57F2B79911100526A26 /* Teapot.usdz */,
 				2DF3C5702B797B7D00526A26 /* Assets.xcassets */,
+				2DF3C57D2B79902C00526A26 /* Globe.usdz */,
 				2DF3C5752B797B7D00526A26 /* Info.plist */,
 				2DF3C5722B797B7D00526A26 /* Preview Content */,
 			);
@@ -81,6 +90,15 @@
 				2DF3C5732B797B7D00526A26 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2DF3C5812B7991C700526A26 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				2DF3C5832B7991D600526A26 /* Globe.usdz */,
+				2DF3C5822B7991D300526A26 /* Teapot.usdz */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,8 +162,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DF3C57E2B79902C00526A26 /* Globe.usdz in Resources */,
 				2DF3C5742B797B7D00526A26 /* Preview Assets.xcassets in Resources */,
 				2DF3C5712B797B7D00526A26 /* Assets.xcassets in Resources */,
+				2DF3C5802B79911200526A26 /* Teapot.usdz in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
