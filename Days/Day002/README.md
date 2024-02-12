@@ -53,7 +53,7 @@ Model3D(url: url) { model in
    ProgressView()
 }
 ```
-To display on object from your app's assets,first add the file to your app by selecting File > Add Files To... and then selecting your models. You can add these models to a nested `Assets` folder to stay organized. In your app you can reference the models by name:
+To display on object from your app's assets, first add the file to your app by selecting File > Add Files To... and then selecting your models. You can add these models to a nested `Assets` folder to stay organized. If you do this, follow the steps [here](https://stackoverflow.com/a/43129166/12806961) to add these nested assets to your app's Bundle. In your app you can reference the models by name:
 ```swift
 Model3D(named: "Globe") { model in
   model
