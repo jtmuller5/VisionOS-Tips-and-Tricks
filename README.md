@@ -13,3 +13,4 @@ Tips and tricks for the Apple Vision Pro and VisionOS
 ## Apple Vision Pro Tips
 - [Turn on eye tracking](https://twitter.com/i/bookmarks/all?post_id=1757268086405976512)
 - [Stream games to AVP using Moonlight](https://testflight.apple.com/join/4eE59dyH)
+- [Connect to Safari Web Inspector to Safari Browser running in AVP](https://twitter.com/andywiseguy/status/1754238335357173842)
