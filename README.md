@@ -6,6 +6,8 @@ Tips and tricks for the Apple Vision Pro and VisionOS
 | --- | --- | --- |
 | 001 | [Day 1](Days/Day001) | Display Text |
 | 002 | [Day 2](Days/Day002) | Display 3D Object |
+| 003 | [Day 3](Days/Day003) | Display Windows |
+
 
 
 ## Apple Vision Pro Tips
