@@ -8,6 +8,8 @@ Tips and tricks for the Apple Vision Pro and VisionOS
 | 002 | [Day 2](Days/Day002) | Display 3D Object |
 | 003 | [Day 3](Days/Day003) | Display Windows |
 | 004 | [Day 4](Days/Day004) | Translate a 3D Object |
+| 005 | [Day 4](Days/Day005) | Add Gestures to Models |
+
 
 
 ## Apple Vision Pro Tips
