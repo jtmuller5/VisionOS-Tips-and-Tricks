@@ -9,6 +9,7 @@ Tips and tricks for the Apple Vision Pro and VisionOS
 | 003 | [Day 3](Days/Day003) | Display Windows |
 | 004 | [Day 4](Days/Day004) | Translate a 3D Object |
 | 005 | [Day 5](Days/Day005) | Add Gestures to Models |
+| 006 | [Day 6](Days/Day006) | Rotate a 3D Object |
 
 
 
