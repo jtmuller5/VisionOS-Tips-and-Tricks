@@ -1,55 +1,57 @@
-#  View the World Mesh
+# Place Objects Relative to the User
 
-> This example requires a real Vision Pro device. Scene reconstruction is not supported in the simulator
+Goal: Add objects to the scene with coordinates relative to the user
 
-The official Apple tutorials for this feature can be found [here](https://developer.apple.com/documentation/visionos/incorporating-real-world-surroundings-in-an-immersive-experience) and [here](https://developer.apple.com/documentation/arkit/arkit_in_ios/content_anchors/visualizing_and_interacting_with_a_reconstructed_scene).
+3D models can be moved around within Volumes (windows with the [Volumetric](https://developer.apple.com/documentation/SwiftUI/WindowStyle/volumetric) window style) and [ImmersiveSpaces](https://developer.apple.com/documentation/SwiftUI/ImmersiveSpace).
 
-To get started, add the following lines to `info.plist`:
+**Volumes - Window**
+> Add depth to your app with a 3D volume. Volumes are SwiftUI scenes that can showcase 3D content using RealityKit or Unity, creating experiences that are viewable from any angle in the Shared Space or an app’s Full Space.
+
+**Spaces - Scene**
+> By default, apps launch into the Shared Space, where they exist side by side — much like multiple apps on a Mac desktop. Apps can use windows and volumes to show content, and the user can reposition these elements wherever they like. For a more immersive experience, an app can open a dedicated Full Space where only that app’s content will appear. Inside a Full Space, an app can use windows and volumes, create unbounded 3D content, open a portal to a different world, or even fully immerse people in an environment.
+
+## In a Volumetric Window
+You can create a volumetric window by giving your window a `volumetric` style:
+```swift
+    var body: some Scene {
+        WindowGroup {
+            ContentView()
+        }.windowStyle(.volumetric)
+    }
 ```
-    <key>NSWorldSensingUsageDescription</key>
-    <string>Get world data</string>
-    <key>NSHandsTrackingUsageDescription</key>
-    <string>Get hand data</string>
+
+Inside of this volume, you can position 3D objects a few ways using the [position](https://developer.apple.com/documentation/swiftui/view/position(x:y:) and [offset](https://developer.apple.com/documentation/swiftui/view/offset(z:) modifiers. These modifiers position the center of a view inside its parent's coordinate space. Inside the volume, the coordinate (0, 0, 0) refers to the left, upper, rear corner, respectively. In other words: 
+- Increasing the x value moves the object to the right
+- Increasing the y value moves the object down
+- Increasing the z value moves the object towards the user
+
+```swift
+    var body: some View {
+        VStack {
+            Model3D(named: "Scene", bundle: realityKitContentBundle)
+                .position(x: 300,y: 500)
+                .offset(z: 400)
+            
+            Text("Hello, world!")
+        }
+    }
 ```
 
-Scene meshes consist of [MeshAnchors](https://developer.apple.com/documentation/arkit/meshanchor) which will be provided by the SceneReconstructionProvider. Each MeshAnchor contains the following data:
+Refer to this article on [Making fine adjustments to a view's position](https://developer.apple.com/documentation/swiftui/making-fine-adjustments-to-a-view-s-position) for more info.
 
-```
-AnchorUpdate(
-    event: updated, 
-    timestamp: 241073.4272435, 
-    anchor: MeshAnchor(
-        id: 9B52EEF4-565F-4685-BAC1-E6B12AD69752, 
-        originFromAnchorTransform: <
-            translation=(-8.627284 10.236238 0.091287) 
-            rotation=(-0.02° 80.17° -0.02°)
-        >, 
-        geometry: Geometry(
-            vertices: 
-                GeometrySource(
-                    count: 2139, 
-                    format: 
-                        MTLVertexFormat(
-                            rawValue: 30
-                        )), 
-                    normals: 
-                        GeometrySource(
-                            count: 2139, 
-                            format: 
-                                MTLVertexFormat(
-                                    rawValue: 30)), 
-                            faces: 
-                                GeometryElement(
-                                    count: 3764, 
-                                    primitive: triangle), 
-                            classifications: 
-                                GeometrySource(
-                                    count: 3764, 
-                                        format: 
-                                            MTLVertexFormat(
-                                                rawValue: 45)
-                                            )
-                                )
-                        )
-                )
+## In a RealityView
+It is more likely that you'll be handling 3D content inside of a RealityView. After creating a ModelEntity, you can change its position relative to its parent using its `position` property:
+
+```swift
+    var body: some View {
+        RealityView{ content in
+            let sphere : Entity = ModelEntity(
+                mesh: .generateSphere(radius: 0.1),
+                materials: [SimpleMaterial(color: .blue, isMetallic: false)]
+            )
+            
+            sphere.position = SIMD3(0.4,0,0)
+            content.add(sphere)
+        }
+    }
 ```
