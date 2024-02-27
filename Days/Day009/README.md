@@ -55,3 +55,4 @@ It is more likely that you'll be handling 3D content inside of a RealityView. Af
         }
     }
 ```
+The coordinate system works the same in a RealityView with positive x being to the right, positive y being down, and positive z being towards the user.
