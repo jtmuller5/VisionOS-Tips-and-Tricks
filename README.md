@@ -11,7 +11,8 @@ Tips and tricks for the Apple Vision Pro and VisionOS
 | 005 | [Day 5](Days/Day005) | Add Gestures to Models |
 | 006 | [Day 6](Days/Day006) | Rotate a 3D Object |
 | 007 | [Day 7](Days/Day007) | Open Multiple Windows |
-
+| 008 | [Day 8](Days/Day008) | Request Permissions |
+| 009 | [Day 9](Days/Day009) | Place objects relative to the user|
 
 
 ## Apple Vision Pro Tips

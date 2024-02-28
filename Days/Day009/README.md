@@ -2,6 +2,8 @@
 
 Goal: Add objects to the scene with coordinates relative to the user
 
+![image](https://github.com/jtmuller5/VisionOS-Tips-and-Tricks/assets/47997351/f9de8204-218e-48b9-9e81-ec99a7efc37c)
+
 3D models can be moved around within Volumes (windows with the [Volumetric](https://developer.apple.com/documentation/SwiftUI/WindowStyle/volumetric) window style) and [ImmersiveSpaces](https://developer.apple.com/documentation/SwiftUI/ImmersiveSpace).
 
 **Volumes - Window**
