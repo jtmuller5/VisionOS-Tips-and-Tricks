@@ -18,7 +18,7 @@ struct ContentView: View {
                 materials: [SimpleMaterial(color: .blue, isMetallic: false)]
             )
             
-            sphere.position = SIMD3(0.4,0,0)
+            sphere.position = SIMD3(0,0,0.3)
             content.add(sphere)
         }
     }
