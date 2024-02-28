@@ -27,3 +27,8 @@ https://swiftwithmajid.com/2024/01/30/visionos-ornaments-in-swiftui/
         .padding()
     }
 ```
+
+## [TabView](https://developer.apple.com/documentation/swiftui/tabview)
+
+
+Many of these ornaments are discussed in the [Meet SwiftUI for spatial computing](https://developer.apple.com/videos/play/wwdc2023/10109/?time=72) video.
